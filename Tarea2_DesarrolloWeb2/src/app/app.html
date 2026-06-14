@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <div class="logo"> Tienda de Videojuegos  Baity :D</div>
+
+  <ul class="menu">
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/videojuegos"
+        routerLinkActive="active">
+        Videojuegos
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/publisher"
+        routerLinkActive="active">
+        Publisher
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/contactos"
+        routerLinkActive="active">
+        Contactos
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
