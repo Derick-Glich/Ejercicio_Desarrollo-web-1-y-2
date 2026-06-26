@@ -1,0 +1,42 @@
+<div class="container">
+
+    <h1>BUSCAR POR PAIS</h1>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            [(ngModel)]="countryName"
+            placeholder="Ingrese el nombre del país..."
+            (keyup.enter)="searchCountry()">
+        <button (click)="searchCountry()">Buscar</button>
+
+    </div>
+
+    <div *ngIf="loading">Borrar para que apareZca</div>
+
+    <div *ngIf="error">
+        {{ error }}
+    </div>
+
+    <div *ngIf="country" class="card">
+
+        <img
+            [src]="country.flag.url_png"
+            [alt]="country.names.common">
+
+        <h2>{{ country.names.common }}</h2>
+
+        <p><strong>Capital:</strong> {{ country.capitals[0].name }}</p>
+
+        <p><strong>Región:</strong> {{ country.region }}</p>
+
+        <p><strong>Población:</strong> {{ country.population | number }}</p>
+
+        <p><strong>Código Alpha-2:</strong> {{ country.codes.alpha_2 }}</p>
+
+        <p><strong>Código Alpha-3:</strong> {{ country.codes.alpha_3 }}</p>
+
+    </div>
+
+</div>

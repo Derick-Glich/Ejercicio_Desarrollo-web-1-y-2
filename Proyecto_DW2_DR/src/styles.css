@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Fondo moderno */
+  background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+  color: white;
+  min-height: 100vh;
+}
+
+/* NAVBAR MEJORADO */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 25px;
+
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  transition: 0.25s;
+  font-weight: 500;
+}
+
+/* hover bonito */
+.links a:hover {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+/* activo */
+.active {
+  background: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}

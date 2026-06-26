@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h1>FILTRAR POR CONTINENTE</h1>
+
+  <div class="buttons">
+    <button (click)="filterByRegion('americas')">América</button>
+    <button (click)="filterByRegion('europe')">Europa</button>
+    <button (click)="filterByRegion('asia')">Asia</button>
+    <button (click)="filterByRegion('africa')">África</button>
+    <button (click)="filterByRegion('oceania')">Oceanía</button>
+  </div>
+
+  <div *ngIf="loading">precionar boton filtro para que aparezcan</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <div class="grid">
+
+    <div class="card" *ngFor="let country of countries">
+
+      <!-- IMAGEN -->
+      <img [src]="country.flag.url_png" class="flag" />
+
+      <!-- INFO -->
+      <div class="info">
+        <h3>{{ country.names.common }}</h3>
+        <p>{{ country.region }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

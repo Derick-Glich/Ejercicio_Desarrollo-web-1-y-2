@@ -1,0 +1,203 @@
+/* =========================
+   FONDO GENERAL
+========================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0b1220);
+  color: white;
+}
+
+/* =========================
+   NAVBAR (BANNER PRINCIPAL)
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 28px;
+
+  background: linear-gradient(90deg, #1f2937, #111827);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+
+  background: rgba(255,255,255,0.05);
+}
+
+.links a:hover {
+  background: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+/* LINK ACTIVO */
+.active {
+  background: #3b82f6 !important;
+  box-shadow: 0 0 12px rgba(59,130,246,0.5);
+}
+
+/* =========================
+   CONTENEDORES GENERALES
+========================= */
+.container {
+  padding: 25px;
+}
+
+/* TITULOS */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   BARRA DE BÚSQUEDA
+========================= */
+input {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 12px 15px;
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  margin-right: 10px;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* BOTÓN GENERAL */
+button {
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #3b82f6;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* =========================
+   GRID DE PAISES
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* CARD PEQUEÑA (IMPORTANTE PARA BANDERAS) */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.12);
+}
+
+/* BANDERAS */
+.flag {
+  width: 100%;
+  height: 85px;
+  object-fit: cover;
+}
+
+/* INFO */
+.info {
+  padding: 10px;
+}
+
+.info h3 {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.info p {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* =========================
+   LOADING / ERROR
+========================= */
+.loading {
+  text-align: center;
+  margin-top: 15px;
+  color: #93c5fd;
+}
+
+.error {
+  text-align: center;
+  margin-top: 15px;
+  color: #f87171;
+}
+
+/* =========================
+   BOTONES DE FILTRO
+========================= */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.buttons button:hover {
+  background: #3b82f6;
+}

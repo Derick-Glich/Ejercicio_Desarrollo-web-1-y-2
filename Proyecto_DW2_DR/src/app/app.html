@@ -1,0 +1,16 @@
+<nav class="navbar">
+
+  <div class="logo">
+    PAISES DEL MUNDO
+  </div>
+
+  <div class="links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+    <a routerLink="/busqueda" routerLinkActive="active">Búsqueda</a>
+    <a routerLink="/filtro" routerLinkActive="active">Filtro</a>
+  </div>
+
+</nav>
+
+<!-- Aquí cargan las páginas -->
+<router-outlet></router-outlet>

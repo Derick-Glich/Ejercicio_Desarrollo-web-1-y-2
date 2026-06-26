@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>🌍 Países del Mundo</h1>
+
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <div class="grid">
+
+    <div class="card" *ngFor="let country of countries">
+
+      <img class="flag" [src]="country.flag.url_png" />
+
+      <div class="info">
+        <h3>{{ country.names.common }}</h3>
+        <p>{{ country.region }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
